@@ -1,3 +1,3 @@
-class AmazonEC2():
-    def create_new_instance(self):
-        print("Hello")
+class RemoveInstance():
+    def remove_instance(self):
+        print("This will delete a new instance.")
