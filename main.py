@@ -9,13 +9,14 @@ def validate_arguments():
         print("Attempting to create a new AWS EC2 Instance...")
     elif option == "delete":
         print("You have selected the 'delete' option to remove an AWS EC2 Instance...")
+        return option
     elif option == "list":
         print("Retrieving all of your existing EC2 instances...")
     else:
         raise invalid_arg
     return option
 
-def conduct_action(selected_option):
+def conduct_action(selected_option, deleted_instance=""):
     if selected_option == "create":
         instance = create_ec2_instance.CreateInstance()
     elif selected_option == "delete":
